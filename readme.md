@@ -10,24 +10,6 @@ once per day, gets your current home IP address. It then updates an A record in 
 some routers offer a built-in DDNS option, you are normally limited to using a DDNS service that could have a cost and also
 I personally have found many of them unreliable at best.
 
-## Why do you need Dynamic DNS?
-
-Dynamic DNS (DDNS) is commonly used when you want to provide a consistent domain name for a device or service that doesn’t have 
-a static IP address, such as those on a home or small business network with a dynamic IP. Here are some typical use cases:
-
-- **Remote Access to Home or Office Networks**
-   - Personal Servers: Many people set up home servers for personal websites, game servers, media streaming, or file sharing (e.g., Plex or Nextcloud). DDNS allows them to access these services remotely without worrying about IP changes.
-   - Remote Desktop or VPN Access: For securely accessing computers or networks remotely, DDNS provides a stable address for VPN connections or remote desktop sessions to a home or small office network. 
-- **Internet of Things (IoT) Devices**
-    - Smart Home Automation: Devices like cameras, thermostats, or smart lighting systems often need remote access. With DDNS, users can easily control and monitor IoT devices without needing to know the current IP address.
-  - Security Cameras: Accessing security cameras remotely is a common use case for DDNS, as users can monitor their property through a fixed domain name, even as IP addresses change.
-3. **Gaming Servers**
-    - Online Gaming: If you’re hosting a private game server (e.g., Minecraft, Counter-Strike), DDNS lets players connect using a consistent domain name instead of requiring you to update everyone when the IP address changes.
-   - LAN Parties or Group Gaming: Dynamic DNS is useful for organizing games with friends or setting up game sessions that may need regular connectivity with known addresses.
-4. **Hosting Applications on Dynamic IP Networks**
-    - Web Development and Testing: Developers often run web applications or APIs on local machines and want external collaborators to access them. With DDNS, they can provide access without setting up static IPs or exposing the local server IP.
-   - Small Business Applications: Small businesses often host custom applications like inventory management systems or CRM tools locally. DDNS enables consistent remote access, crucial for users who work from home or on the road.
-
 ## Setup
 
 - First you will need a domain name hosted on AWS's Route53.
@@ -57,3 +39,21 @@ go build -ldflags -H=windowsgui -o ddns.exe
 ```bash
 go build -o ddns
 ```
+
+## Why do you need Dynamic DNS?
+
+Dynamic DNS (DDNS) is commonly used when you want to provide a consistent domain name for a device or service that doesn’t have
+a static IP address, such as those on a home or small business network with a dynamic IP. Here are some typical use cases:
+
+- **Remote Access to Home or Office Networks**
+    - Personal Servers: Many people set up home servers for personal websites, game servers, media streaming, or file sharing (e.g., Plex or Nextcloud). DDNS allows them to access these services remotely without worrying about IP changes.
+    - Remote Desktop or VPN Access: For securely accessing computers or networks remotely, DDNS provides a stable address for VPN connections or remote desktop sessions to a home or small office network.
+- **Internet of Things (IoT) Devices**
+    - Smart Home Automation: Devices like cameras, thermostats, or smart lighting systems often need remote access. With DDNS, users can easily control and monitor IoT devices without needing to know the current IP address.
+    - Security Cameras: Accessing security cameras remotely is a common use case for DDNS, as users can monitor their property through a fixed domain name, even as IP addresses change.
+3. **Gaming Servers**
+    - Online Gaming: If you’re hosting a private game server (e.g., Minecraft, Counter-Strike), DDNS lets players connect using a consistent domain name instead of requiring you to update everyone when the IP address changes.
+    - LAN Parties or Group Gaming: Dynamic DNS is useful for organizing games with friends or setting up game sessions that may need regular connectivity with known addresses.
+4. **Hosting Applications on Dynamic IP Networks**
+    - Web Development and Testing: Developers often run web applications or APIs on local machines and want external collaborators to access them. With DDNS, they can provide access without setting up static IPs or exposing the local server IP.
+    - Small Business Applications: Small businesses often host custom applications like inventory management systems or CRM tools locally. DDNS enables consistent remote access, crucial for users who work from home or on the road.
