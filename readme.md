@@ -8,7 +8,7 @@ binary, but you are welcome to download the source and build your own. Currently
 This is basically a self-hosted Dynamic DNS application. First it hits an api endpoint (`https://api.ipify.org?format=json`) 
 once per day, gets your current home IP address. It then updates an A record in Route53 to reflect that ip address. While
 some routers offer a built-in DDNS option, you are normally limited to using a DDNS service that could have a cost and also
-I personally have found many of them unreliable at best.
+I personally have found many of them unreliable at best. This can be ran on any computer that sits inside your home/office network.
 
 ## Setup
 
